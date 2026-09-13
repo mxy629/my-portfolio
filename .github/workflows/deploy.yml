@@ -36,9 +36,10 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # 联系邮箱不写进源码，由仓库 Secret 在构建时注入。
-          # 配置位置：Settings → Secrets and variables → Actions → New repository secret
-          VITE_CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+          # 联系邮箱不写进源码，构建时注入。
+          # 优先读 Secret（加密、不可读回）；没配 Secret 就回退到 Variable（明文）。
+          # 配置位置：Settings → Secrets and variables → Actions
+          VITE_CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL || vars.CONTACT_EMAIL }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
