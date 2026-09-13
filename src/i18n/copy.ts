@@ -86,7 +86,7 @@ export interface Copy {
 const EMAIL: string = import.meta.env.VITE_CONTACT_EMAIL ?? '';
 
 const en: Copy = {
-  meta: { title: 'Meixy — 3D Creator' },
+  meta: { title: 'Meixy — Earth Online Player' },
   nav: { about: 'About', price: 'Price', projects: 'Projects', contact: 'Contact' },
   hero: {
     heading: "Hi, i'm Meixy",
@@ -184,7 +184,7 @@ const en: Copy = {
 };
 
 const zh: Copy = {
-  meta: { title: '季节 — 3D 创作者' },
+  meta: { title: '季节 — 地球online玩家' },
   nav: { about: '关于', price: '价格', projects: '项目', contact: '联系' },
   hero: {
     heading: '嗨，我是季节',
