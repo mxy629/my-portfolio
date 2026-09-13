@@ -35,7 +35,7 @@ export default function ContactSection() {
           <FadeIn delay={0.3} y={20}>
             <a
               href={`mailto:${t.contact.email}`}
-              className="hero-heading block text-center font-medium uppercase leading-none tracking-widest transition-opacity duration-200 hover:opacity-70"
+              className="hero-heading block text-center font-medium leading-none tracking-widest transition-opacity duration-200 hover:opacity-70"
               style={{ fontSize: 'clamp(1.05rem, 3.2vw, 2.6rem)' }}
             >
               {t.contact.email}
